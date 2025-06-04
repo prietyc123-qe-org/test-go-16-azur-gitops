@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: test-go-16-azur 
+  janus-idp.io/tekton: test-go-16-azur
+  backstage.io/kubernetes-id: test-go-16-azur
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: test-go-16-azur
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
